@@ -95,8 +95,8 @@
 	-->
 
 	<user name="root" defaultAccount="true">
-		<property name="password">123456</property>
-		<property name="schemas">TESTDB</property>
+		<property name="password">1</property>
+		<property name="schemas">dbtest</property>
 		
 		<!-- 表级 DML 权限设置 -->
 		<!-- 		
@@ -109,10 +109,9 @@
 		 -->
 	</user>
 
-	<user name="user">
-		<property name="password">user</property>
-		<property name="schemas">TESTDB</property>
-		<property name="readOnly">true</property>
-	</user>
-
+	<!--<user name="user">-->
+		<!--<property name="password">user</property>-->
+		<!--<property name="schemas">TESTDB</property>-->
+		<!--<property name="readOnly">true</property>-->
+	<!--</user>-->
 </mycat:server>

@@ -80,6 +80,13 @@
 		</rule>
 	</tableRule>
 
+	<tableRule name="sharding-by-month-type">
+		<rule>
+			<columns>sharding_key</columns>
+			<algorithm>sharding-by-month-type</algorithm>
+		</rule>
+	</tableRule>
+
 	<function name="murmur"
 		class="io.mycat.route.function.PartitionByMurmurHash">
 		<property name="seed">0</property><!-- 默认是0 -->
@@ -126,5 +133,11 @@
 	
 	<function name="jump-consistent-hash" class="io.mycat.route.function.PartitionByJumpConsistentHash">
 		<property name="totalBuckets">3</property>
+	</function>
+
+	<function name="sharding-by-month-type"
+			  class="io.mycat.route.function.PartitionByMonthDifferentType">
+		<property name="sBeginDate">201701</property>
+		<property name="typeCount">3</property>
 	</function>
 </mycat:rule>
